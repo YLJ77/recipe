@@ -13,6 +13,11 @@ import { ShoppingEditComponent } from './shopping-list/shopping-edit/shopping-ed
 import {DropdownDirective} from './shared/dropdown.directive';
 import { HighlightDirective } from './shared/highlight.directive';
 import { UnlessDirective } from './shared/unless.directive';
+import { ShoppingListService } from './shopping-list/shopping-list.service';
+import {AppRoutingModules} from './app-routing.modules';
+import { RecipesStartComponent } from './recipes/recipes-start/recipes-start.component';
+import { RecipesEditComponent } from './recipes/recipes-edit/recipes-edit.component';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 
 
 @NgModule({
@@ -27,12 +32,17 @@ import { UnlessDirective } from './shared/unless.directive';
     ShoppingEditComponent,
     DropdownDirective,
     HighlightDirective,
-    UnlessDirective
+    UnlessDirective,
+    RecipesStartComponent,
+    RecipesEditComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    AppRoutingModules,
+    FormsModule,
+    ReactiveFormsModule
   ],
-  providers: [],
+  providers: [ShoppingListService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
