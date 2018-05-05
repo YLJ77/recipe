@@ -18,6 +18,8 @@ import {AppRoutingModules} from './app-routing.modules';
 import { RecipesStartComponent } from './recipes/recipes-start/recipes-start.component';
 import { RecipesEditComponent } from './recipes/recipes-edit/recipes-edit.component';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
+import {RecipeService} from './recipes/recipe.service';
+import {ShortenPipe} from './shared/shorten.pipe';
 
 
 @NgModule({
@@ -34,7 +36,8 @@ import {FormsModule, ReactiveFormsModule} from '@angular/forms';
     HighlightDirective,
     UnlessDirective,
     RecipesStartComponent,
-    RecipesEditComponent
+    RecipesEditComponent,
+    ShortenPipe
   ],
   imports: [
     BrowserModule,
@@ -42,7 +45,7 @@ import {FormsModule, ReactiveFormsModule} from '@angular/forms';
     FormsModule,
     ReactiveFormsModule
   ],
-  providers: [ShoppingListService],
+  providers: [ShoppingListService, RecipeService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
