@@ -6,7 +6,7 @@ import {RecipesEditComponent} from './recipes-edit/recipes-edit.component';
 import {RecipesDetailComponent} from './recipes-detail/recipes-detail.component';
 
 const recipesRoutes: Routes = [
-  { path: 'recipes', component: RecipesComponent, children: [
+  { path: '', component: RecipesComponent, children: [
       { path: '', component: RecipesStartComponent },
       { path: 'new', component: RecipesEditComponent },
       { path: ':id', component: RecipesDetailComponent },

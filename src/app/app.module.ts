@@ -8,9 +8,8 @@ import { UnlessDirective } from './shared/unless.directive';
 import { ShoppingListService } from './shopping-list/shopping-list.service';
 import {AppRoutingModules} from './app-routing.modules';
 import {RecipeService} from './recipes/recipe.service';
-import {RecipesModule} from './recipes/recipes.module';
 import {SharedModule} from './shared/shared.module';
-import {ShoppingListModule} from './shopping-list/shopping-list.module';
+import { HomeComponent } from './home/home.component';
 
 
 @NgModule({
@@ -19,13 +18,12 @@ import {ShoppingListModule} from './shopping-list/shopping-list.module';
     HeaderComponent,
     HighlightDirective,
     UnlessDirective,
+    HomeComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModules,
-    RecipesModule,
     SharedModule,
-    ShoppingListModule
   ],
   providers: [ShoppingListService, RecipeService],
   bootstrap: [AppComponent]
